@@ -1,5 +1,5 @@
-password = input('Введите пароль: ')
-if password == 'пароль':
-    print('Проходи!')
+year = int(input())
+if year % 4 == 0:
+    print(366)
 else:
-    print('Доступ запрещен!')
+    print(365)
