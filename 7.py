@@ -1,7 +1,10 @@
-n, m, k = input().split(sep=' ')
-if int(n) >= int(m) and int(n) >= int(k):
-    print(n)
-elif int(m) >= int(n) and int(m) >= int(k):
-    print(m)
+a = list(map(int, input().split()))
+n = a[0]
+k = a[1]
+m = a[2]
+if m > k:
+    print(m - k - 1)
+elif m < k:
+    print(n - k + (m - 1))
 else:
-    print(k)
+    print(0)
