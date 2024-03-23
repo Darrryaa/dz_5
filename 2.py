@@ -1,7 +1,11 @@
-print('Какие два слова передал первой радиограммой Александр Попов?')
-first_word = input('Введите первое слово: ')
-second_word = input('Введите второе слово: ')
-if first_word == 'Генрих' and second_word == 'Герц':
-    print('Верно')
+xc = int(input())
+yc = int(input())
+r = int(input())
+x = int(input())
+y = int(input())
+if (abs(x - xc) ** 2 + abs(y - yc) ** 2) ** (1 / 2) > r:
+    print('Точка вне окружности')
+elif (abs(x - xc) ** 2 + abs(y - yc) ** 2) ** (1 / 2) < r:
+    print('Точка внутри окружности')
 else:
-    print('Неверно')
+    print('Точка на окружности')
