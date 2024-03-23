@@ -1,14 +1,23 @@
-name = input('Здравствуйте! Как вас зовут? ')
-print('Очень приятно, ', name, '! ', 'Меня зовут Марк.', sep='')
-age = int(input('Сколько Вам лет? '))
-if age > 78:
-    print('Да, ', name, ', Вы старше меня на ', age - 78, ' лет.', sep='')
-elif age < 78:
-    print('Да, ', name, ', я старше Вас на ', 78 - age, ' лет.', sep='')
+knat = int(input())
+galleon = knat // (17 * 29)
+sikl = (knat - (galleon * 17 * 29)) // 29
+knat = knat - sikl * 29 - galleon * 17 * 29
+if galleon == 0 and sikl == 0:
+    print(f'{knat} кнатов')
+elif galleon == 0 and knat == 0:
+    print(f'{sikl} сиклей')
+elif sikl == 0 and knat == 0:
+    print(f'{galleon} галлеонов')
+elif galleon == 0:
+    print(f'{sikl} сиклей')
+    print(f'{knat} кнатов')
+elif sikl == 0:
+    print(f'{galleon} галлеонов')
+    print(f'{knat} кнатов')
+elif knat == 0:
+    print(f'{galleon} галлеонов')
+    print(f'{sikl} сиклей')
 else:
-    print('Да, ', name, ', Вам столько же лет сколько и мне. ', sep='')
-program = input('Вам нравится программировать? ')
-if program.lower() == 'да':
-    print('Превосходно! Уверен, у Вас получится написать множество полезных и хороших программ.')
-else:
-    print('Жаль. Я думал, Вы сможете написать интересную программу для меня.')
+    print(f'{galleon} галлеонов')
+    print(f'{sikl} сиклей')
+    print(f'{knat} кнатов')
